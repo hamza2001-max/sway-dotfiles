@@ -18,7 +18,7 @@ exec_always --no-startup-id 'killall -q waybar; sleep 0.2; waybar'
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
+# Home row direction keys
 set $left h
 set $down j
 set $up k
