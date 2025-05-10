@@ -1,0 +1,104 @@
+* {
+	font-family: "JetBrains Mono", "Font Awesome 5 Free", "Font Awesome 6 Free", FontAwesome, sans-serif;
+	font-size: 13px;
+	min-height: 0;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+}
+
+window#waybar {
+	/* background: rgba(30, 30, 46, 0.8); */
+	color: #cdd6f4;
+	border-radius: 10px;
+	background: none;
+}
+
+tooltip {
+	background: rgba(30, 30, 46, 0.7);
+	border-radius: 8px;
+	border: none;
+}
+
+#workspaces button {
+	padding: 0 6px;
+	margin: 4px 3px;
+	border-radius: 8px;
+	background: transparent;
+	color: #cdd6f4;
+	transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+	background: rgba(49, 50, 68, 0.5);
+}
+
+#workspaces button.focused {
+	background: rgba(49, 50, 68, 0.7);
+	color: #cdd6f4;
+}
+
+#workspaces button.urgent {
+	background: rgba(49, 50, 68, 0.7);
+	color: #cdd6f4;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray,
+#mode {
+	padding: 0 10px;
+	margin: 4px 3px;
+	border-radius: 8px;
+	background: rgba(49, 50, 68, 0.7);
+	color: #cdd6f4;
+}
+
+#clock {
+	background: rgba(49, 50, 68, 0.7);
+	color: #cdd6f4;
+	font-weight: bold;
+}
+
+#battery.warning {
+	background: rgba(255,165,0,0.8);
+	color: #000;
+}
+
+#battery.critical {
+	background: rgba(255, 0, 0, 0.8);
+	color: #ffffff;
+}
+
+@keyframes blink {
+	to {
+		background: rgba(243, 139, 168, 0.8);
+	}
+}
+
+#battery.charging {
+	background: #00fa75;
+	color: #000;
+}
+
+#pulseaudio.muted {
+	/* background: rgba(127, 132, 156, 0.7);
+	color: #999999; */
+}
+
+#tray {
+	background: rgba(49, 50, 68, 0.7);
+}
+
+#network.disconnected {
+    background-image: url("/home/hamza/.config/waybar/icons/wifi-off.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 20px;
+    min-height: 20px;
+    color: #fff;
+}

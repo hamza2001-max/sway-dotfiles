@@ -1,0 +1,70 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 35,
+  "spacing": 8,
+  "margin": "24px 20px 0px 20px",
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "network", "battery", "tray"],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d-%m-%Y %H:%M}",
+    "actions": {
+      "on-click": "mode",
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "battery": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-alt": "{icon} {capacity}%",
+    "format-icons": {
+      "charging": ["\uf0e7", "\uf0e7", "\uf0e7", "\uf0e7", "\uf0e7"],
+      "discharging": ["\uf244", "\uf243", "\uf243", "\uf242", "\uf242", "\uf241", "\uf240"],
+      "full": "\uf240"
+    },
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "on-click": "mode"
+  },
+  "network": {
+    "tooltip": false,
+    "format": "\uf1eb",
+    "format-ethernet": "{ipaddr}",
+    "format-disconnected": " "
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "\uf6a9",
+    "format-icons": {
+      "headphone": "\uf58f",
+      "hands-free": "\uf58f",
+      "headset": "\uf590",
+      "phone": "\uf095",
+      "portable": "\uf7c4",
+      "car": "\uf1b9",
+      "default": ["\uf027"]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-right": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  }
+}
+
